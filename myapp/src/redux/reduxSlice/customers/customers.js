@@ -14,12 +14,7 @@ const initialState = [
         LastName: 'Cohen',
         City: 'Ashdod'
     },
-    {
-        ID: '3',
-        FirstName: 'Boris',
-        LastName: 'Sver',
-        City: 'Haifa'
-    }
+
 ]
 
 const customers = createSlice({

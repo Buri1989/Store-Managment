@@ -14,12 +14,7 @@ const initialState = [
         Price: 1500,
         Quantity: '10'
     },
-    {
-        ID: '3',
-        Name: 'Air Jordan4',
-        Price: 900,
-        Quantity: '150'
-    },
+
 ]
 
 const products = createSlice({
