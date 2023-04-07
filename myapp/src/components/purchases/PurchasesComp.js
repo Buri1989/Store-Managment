@@ -86,13 +86,47 @@ const PurchasesComp = () => {
                             padding: "5px"
                         }}
                     >
-                        <
+                        <ControllableStates
+                            options={optionCustomers}
+                            label='Customers'
+                            cusSelected={customerSelected}></ControllableStates>
+                        <ControllableStates
+                            options={optionProducts}
+                            label='Products'
+                            prodSelected={productSelected}></ControllableStates>
+                        <Box
+                            component={"form"}
+                            sx={{
+                                '& > :not(style)': { width: 300, marginTop: 3 },
+                            }}
+                            noValidate
+                            autoComplete="off"
+                        >
+                            <TextField id="outlined-basic" color="primary" label="Dates" variant="outlined" focused onChange={(e) => {
+                                setWrittenDate(e.target.value)
+                            }}
+                                helperText="Please enter your purchase date in the following format day/month/year"
+                                placeholder='17/7/1994' />
+                        </Box>
+                        <Button variant='contained' sx={{ marginTop: 3 }} color="success" onClick={() => {
+                            handleSearch()
+                        }}>Search</Button>
+                    </Box>
+                </Grid>
+                <Grid item sm={12} lg={7}>
+                    <Box sx={{
+                        margin: "30px 10px",
+
+                    }}>
+                        {showTable ? <PurchasesTableComp
+                            productID={selectedProduct}
+                            customerID={selectedCustomer}
+                            selectedDate={selectedDate}></PurchasesTableComp> : <Container></Container>}
                     </Box>
                 </Grid>
             </Grid>
         </ThemeProvider>
     </Container>
-
     )
 }
 
