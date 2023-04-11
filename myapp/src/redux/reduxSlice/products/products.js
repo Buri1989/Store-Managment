@@ -35,6 +35,16 @@ const products = createSlice({
             })
             return product
         },
+        quantityProductUpdate(state, action) {
+            let products = [...state]
+            products = products.map(product => {
+                if (action.payload === product.ID) {
+                    return { ...product, Quantity: product.Quantity - 1 }
+                }
+                else return product
+            })
+            return products
+        },
         deleteProduct(state, action) {
             const start = [...state.slice(0, action.payload - 1)]
             const product = [...state.slice(action.payload)]
