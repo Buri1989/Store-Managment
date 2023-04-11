@@ -21,6 +21,7 @@ const EditProductsComp = () => {
     const productSelector = useSelector(state => state.products)
     const customerSelector = useSelector(state => state.customers)
     const purchasesSelector = useSelector(state => state.purchases)
+
     const params = useParams();
     const [customerList, setCustomerList] = useState([])
     const [product, setProduct] = useState({
