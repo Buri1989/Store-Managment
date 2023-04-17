@@ -8,7 +8,6 @@ import EditProductsComp from './components/editProducts/EditProductsComp'
 import MainComp from './components/main/MainComp'
 import NavbarComp from './components/navbar/NavbarComp'
 import ProductsComp from './components/products/ProductsComp'
-import moduleName from './components/purchases/PurchasesComp'
 import PurchasesComp from './components/purchases/PurchasesComp'
 
 
