@@ -1,12 +1,62 @@
 import React from 'react'
-import MenuComp from './components/menu/MenuComp'
+import { BrowserRouter as Router, Routers, Route, Outlet } from 'react-router-dom'
+import './App.css'
+import BuyProductsComp from './components/buyProducts/BuyProductsComp'
+import CustomersComp from './components/customers/CustomersComp'
+import EditCustomersComp from './components/editCustomers/EditCustomersComp'
+import EditProductsComp from './components/editProducts/EditProductsComp'
+import MainComp from './components/main/MainComp'
+import NavbarComp from './components/navbar/NavbarComp'
+import ProductsComp from './components/products/ProductsComp'
+import moduleName from './components/purchases/PurchasesComp'
+import PurchasesComp from './components/purchases/PurchasesComp'
+
+
 
 
 const App = () => {
   return (
-    <div>
-
-    </div>
+    <Router>
+      <NavbarComp />
+      <Outlet />
+      <Routers>
+        <Route
+          exact
+          path='/'
+          element={<MainComp />}
+        />
+        <Route
+          exact
+          path='/Products'
+          element={<ProductsComp />}
+        />
+        <Route
+          exact
+          path='/EditProducts/:id'
+          element={<EditProductsComp />}
+        />
+        <Route
+          exact
+          path='/EditCustomers/:id'
+          element={<EditCustomersComp />}
+        />
+        <Route
+          exact
+          path='/BuyProduct/:id'
+          element={<BuyProductsComp />}
+        />
+        <Route
+          exact
+          path='/Customers'
+          element={<CustomersComp />}
+        />
+        <Route
+          exact
+          path='/Purchases'
+          element={<PurchasesComp />}
+        />
+      </Routers>
+    </Router>
   )
 }
 
