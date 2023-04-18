@@ -1,7 +1,7 @@
 import React from 'react'
-import { BrowserRouter as Router, Routers, Route, Outlet } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom'
 import './App.css'
-import BuyProductsComp from './components/buyProducts/BuyProductsComp'
+import BuyProductsComp from './components/buyProducts/BuyProducts'
 import CustomersComp from './components/customers/CustomersComp'
 import EditCustomersComp from './components/editCustomers/EditCustomersComp'
 import EditProductsComp from './components/editProducts/EditProductsComp'
@@ -18,7 +18,7 @@ const App = () => {
     <Router>
       <NavbarComp />
       <Outlet />
-      <Routers>
+      <Routes>
         <Route
           exact
           path='/'
@@ -54,7 +54,7 @@ const App = () => {
           path='/Purchases'
           element={<PurchasesComp />}
         />
-      </Routers>
+      </Routes>
     </Router>
   )
 }

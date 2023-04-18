@@ -4,7 +4,7 @@ import PanelComp from './panel/PanelComp'
 import { Box, Container } from '@mui/material'
 import Typography from '@mui/material/Typography'
 import LoadingButton from '@mui/lab/LoadingButton'
-import PreviewIcon from '@mue/icons-material/Preview'
+import PreviewIcon from '@mui/icons-material/Preview';
 
 
 const CustomersComp = () => {
